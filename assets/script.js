@@ -17,11 +17,11 @@ function setQuery() {
         var currentDate = moment.unix(data.dt).format("MM/DD/YYYY");
         nameElement.innerHTML = `${data.name} (${currentDate}) <img src="https://openweathermap.org/img/w/${data.weather[0].icon}.png"/>`;
         var tempElement = document.getElementById("currentTemp");
-        tempElement.innerText = data.main.temp;
+        tempElement.innerText = `${data.main.temp}°`;
         var windElement = document.getElementById("wind");
-        windElement.innerText = data.wind.speed;
+        windElement.innerText = `${data.wind.speed} MPH`;
         var humidElement = document.getElementById("humid");
-        humidElement.innerText = data.main.humidity;
+        humidElement.innerText = `${data.main.humidity}%`;
 
     // .then(data => {
     //     var nameElement = document.getElementById("nameCity");
@@ -44,16 +44,16 @@ function setQuery() {
 
 // localStorage 
 
-// var storageSelector = document.querySelector(".cityName");
-// var button = document.querySelector(".city");
+var storageSelector = document.querySelector(".cityName");
+var button = document.querySelector(".city");
 
-// storageSelector.addEventListener("input", letter => {
-//     console.log(letter)
-//     city.cityContent = letter.target.value
-// })
+storageSelector.addEventListener("click", letter => {
+ 
+    city.cityContent = letter.target.value
+})
 
-// window.localStorage.setItem("cityName", );
-// localStorage.getItem("cityName")
+window.localStorage.setItem("cityName", );
+localStorage.getItem("cityName")
 
 
 // var searchbtn = document.getElementById("city");
