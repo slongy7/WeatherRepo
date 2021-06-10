@@ -22,14 +22,14 @@
         <div class="container-fluid py-5">
           <h1 class="display-5 fw-bold">Search for a City:</h1>
           <input id="cityName" class="city" type="text" placeholder="City">
-          <button class="btn btn-primary btn-lg" type="button" id="city">Search</button>
+          <button class="btn btn-primary btn-lg" type="button" onclick="setQuery()" id="city">Search</button>
         </div>
         <div id="currentWeather">
           <h1 id="nameCity"></h1>
-          <p id="currentTemp"></p>
-          <p id="wind"></p>
-          <p id="humid"></p>
-          <p id="uvIndex"></p>
+          <p id="currentTemp">Temp: </p>
+          <p id="wind">Wind: </p>
+          <p id="humid">Humidity: </p>
+          <p id="uvIndex">UV Index: </p>
         </div>
       </div>
     </div>
@@ -39,7 +39,7 @@
             5-Day Forcast:
           </div>
 
-      <!-- <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script> -->
+      <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
       <script src="assets/script.js"></script>
 </body>
 </html>
